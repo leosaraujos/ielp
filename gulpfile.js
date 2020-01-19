@@ -12,12 +12,12 @@ var browserSync = require('browser-sync').create();
 //SCSS
 gulp.task('sass', function () {
   return gulp.src([
-    'dev/scss/style.scss' 
+    './dev/scss/style.scss' 
     ])
     .pipe(sass().on('error', sass.logError))
     .pipe(uglifycss())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/css/'))
+    .pipe(gulp.dest('./dist/css/'))
     .pipe(browserSync.stream());
 });
 
@@ -45,7 +45,7 @@ gulp.task('imagemin', function() {
 //LIBS
 gulp.task('lib', function(){
   return gulp.src([
-    'node_modules/jquery/jquery.js',
+    'node_modules/jquery/dist/jquery.js',
     'node_modules/popper.js/dist/umd/popper.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/@fortawesome/fontawesome-free/js/all.js'    

@@ -1,0 +1,9 @@
+//TopBar
+.topBar {	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: $gray;
+	padding: 2px 15px;
+	opacity: 0;
+}

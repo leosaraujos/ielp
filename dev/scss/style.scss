@@ -1,6 +1,199 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "imports/color";
 @import "imports/fonts";
+@import "imports/mixins";
+
+//Extends
+%bt-ielp {
+	background: $yellow;
+	color: $black;
+	transition: 0.2s;
+	&:hover {
+		background: $black;
+		color: $yellow;
+		transition: 0.2s;
+	}
+}
+
+//TopBar
+.topBar {	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: $yellow;
+	padding: 2px 15px;	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0 0 0.2rem 0;
+		li {
+			display: inline-block;			
+			a {
+				color: $black;
+				font-size: 0.8rem;
+				i {
+					font-size: 1.8rem;
+				}
+				&:hover {
+					color: $white;
+					text-decoration: none;
+					transition: 0.2s;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}		
+		&.pInfo {
+			li {
+				margin-right: 1.5rem;
+				svg {
+					margin-right: 0.3rem;
+				}				
+			}
+		}
+		&.social {
+			li {
+				margin: 0 1.0rem;
+			}
+		}
+	}
+}
+
+//NavPrincipal
+.navClient {
+	background: rgba($white, 0)!important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 2;
+	li {
+		border-bottom: 3px solid transparent;
+		margin: 0 0.5rem;
+		transition: 0.2s;
+		&:hover {
+			border-bottom: 3px solid $black;
+		}
+		&:last-child {
+			background: $yellow;
+			@include border-radius (5px);
+			&:hover {
+				background: $black;
+				transition: 0.2s;
+				border: 0 !important;
+				a {
+					color: $yellow !important;
+				}
+			}
+		}
+	}
+}
+
+//Logo
+.logoNav {
+	height: 110px;
+	width: auto;
+}
+
+//Slider Client (carousel)
+#sldClient {
+	.carousel-caption {
+		display: flex;
+		align-items: center;
+		text-align: left;
+		.caps {
+			padding-top: 120px;
+			h5 {
+				text-transform: uppercase;
+				font-size: 2.8rem;
+				font-weight: bold;
+				padding: 0.3rem;
+				margin-bottom: 0;
+			}
+			p {
+				font-size: 1.6rem;
+				padding: 0.3rem;
+			}
+			&.black {
+				h5, p {
+					color: $black;
+					background: rgba($white, 0.4);
+				}
+			}
+			&.white {
+				color: $white;
+			}
+			.btn {
+				@extend %bt-ielp;
+			}
+		}
+	}
+}
+
+//Footer
+footer {
+	background: $black;
+	color: $white;
+	padding: 1.5rem 0;
+	.logo-footer {
+		width: 100px;
+	}
+	h4 {
+		font-size: 1.2rem;
+		color: $yellow;
+		text-transform: uppercase;
+		margin-bottom: 1.2rem;
+	}
+	p {
+		font-size: 0.8rem;
+		span {
+			&:before {
+				content: ' - ';
+			}
+		}
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0 0 0.2rem 0;
+		li {
+			display: block;
+			font-size: 0.8rem;
+			margin-bottom: 1.0rem;
+			a {
+				color: $white;
+				svg {
+					margin-right: 0.5rem;
+				}
+				&:hover {
+					color: $yellow;
+				}
+			}						
+		}
+		&.itens {
+			li {
+				margin-bottom: 0.5rem;			
+			}
+		}
+		&.social {
+			li {
+			display: inline-block;
+			margin: 0.5rem; 
+			}
+		}
+	}
+	.btn {
+		@extend %bt-ielp;
+		&:hover {
+			background: $white;
+			color: $black;
+		}
+	}
+	.copy {
+		text-align: center;
+	}
+}
+
+//Queries
 @import "imports/media";
-@import "parts/footer";
-@import "parts/header";
