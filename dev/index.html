@@ -17,7 +17,45 @@
     </header>
 
     <div id="wrap">
-      
+      <section id="sobre">
+        <partial src="sobre.html"></partial>  
+      </section>
+
+      <article id="cta-1">
+        <partial src="cta.html"></partial>  
+      </article>
+
+      <section id="projetos">
+        <partial src="projetos.html"></partial>  
+      </section>
+
+      <section id="colaboradores">
+        <partial src="colaboradores.html"></partial>  
+      </section>
+
+      <article id="cta-2">
+        <partial src="doe-1-home.html"></partial>  
+      </article>
+
+      <section id="midia-home">
+        <partial src="na-midia-home.html"></partial>
+      </section>
+
+      <section id="noticias-home">
+        <partial src="noticias-home.html"></partial>  
+      </section>
+
+      <section id="galeria">
+        <partial src="galeria.html"></partial>  
+      </section>
+
+      <section id="participe-home">
+        <partial src="participe-home.html"></partial>
+      </section>
+
+      <section id="contato">
+        <partial src="contato.html"></partial>  
+      </section>
     </div>
 
     <footer>
@@ -26,6 +64,20 @@
 	
     <script src="js/lib.js"></script>
     <script src="js/app.min.js"></script>	
+
+    <script>
+        // Form
+        $(document).ready(function() {
+          $("#form_fale").submit(function(event) {
+              $("#resposta").html("<img src='images/loader.gif' alt='enviando'><br/><small>Mensagem sendo enviada, por favor aguarde... </small>");
+              event.preventDefault(); 
+              $.post("send_mail.php", $("#form_fale").serialize(), function(data) {
+                  $('#resposta').html(data);
+              });
+              return false;
+          });    
+        });
+    </script>
 
   </body>
 </html>

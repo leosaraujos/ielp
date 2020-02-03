@@ -12,7 +12,7 @@ var browserSync = require('browser-sync').create();
 //SCSS
 gulp.task('sass', function () {
   return gulp.src([
-    './dev/scss/style.scss' 
+    './dev/scss/style.scss'
     ])
     .pipe(sass().on('error', sass.logError))
     .pipe(uglifycss())
@@ -48,7 +48,8 @@ gulp.task('lib', function(){
     'node_modules/jquery/dist/jquery.js',
     'node_modules/popper.js/dist/umd/popper.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
-    'node_modules/@fortawesome/fontawesome-free/js/all.js'    
+    'node_modules/@fortawesome/fontawesome-free/js/all.js',
+    'node_modules/ekko-lightbox/dist/ekko-lightbox.js',       
     ])
   .pipe(concat('lib.js'))
   //.pipe(jsmin())  

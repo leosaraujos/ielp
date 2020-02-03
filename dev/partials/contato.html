@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="row">
+		<h2 class="titleSection p-3">Contato</h2>
+		<div class="col">
+			<p>Preencha o formulário abaixo e mande a sua mensagem! </p>
+		</div>
+	</div>
+
+	<div class="row">
+        <div class="col-12">
+
+            <div id="resposta"></div>
+            
+            <div id="formulario">
+                <form enctype="multipart/form-data" id="form_fale" class="row form_fale" method="post">
+                <input type="hidden" value="leoaraujo@leoaraujo.com" name="destinatario" />                            
+                <input type="hidden" value="true" name="contato" />
+                
+                <div class="form-group col-12 col-md-6 p-0">
+                    <div class="col mt-3">
+                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome:">
+                    </div>    
+                
+                    <div class="col mt-3">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail:">
+                    </div>
+
+                    <div class="col mt-3">
+                        <input type="tel" class="form-control" name="telefone" id="telefone" placeholder="Telefone">
+                    </div>
+
+                    <div class="col mt-3">
+                        <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto">
+                    </div>
+                </div>
+                
+                <div class="form-group col-12 col-md-6 p-0 msg">
+                    <div class="col">
+                        <textarea class="form-control" name="mensagem" id="mensgem" rows="5" placeholder="Mensagem"></textarea>
+                    </div>    
+                </div>
+                
+                <div class="form-group col-12 col-md-6">
+                    <div id="retorno"></div>
+                </div>
+                <div class="form-group col-12 col-md-6 text-right">
+                    <button type="submit" class="btn bt-send">ENVIAR</button>
+                </div>    
+            </form>
+
+        </div>
+    </div>
+</div>

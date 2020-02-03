@@ -200,6 +200,67 @@ $mq-desktop           : 1200px !default;
       display: none;
     }
   }
+
+  //Section
+  section {
+    padding: 2.0rem 0;
+    .titleSection {
+      font-size: 1.4rem;
+    }
+  }
+
+  //Na mídia
+  #midia-home {
+    background: #FFFFFF !important;
+  }
+  
+  //Noticias
+  #noticias-home {
+    .row {
+      .col {
+        min-width: 100% !important;
+        flex-basis: 1 !important;        
+        flex-grow: 1 !important;        
+        max-width: 100%;
+      }
+    }
+  }
+  #noticias-l {
+    #noticias-home {
+      .col {
+        .card {
+          a { 
+            display: block;
+            figure {
+              margin-bottom: 10px;
+              img {
+                height: auto;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  //Noticias Open
+  #noticia-open {
+    .post {
+      .title-post {
+        font-size: 1.3rem;
+      }    
+    }
+  }
+  //Formulario
+  #formulario {
+    .form-group {
+      &.msg {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
   //Footer
   footer {
     text-align: center;
