@@ -117,18 +117,18 @@ body {
 		&.active {
 			border-bottom: 3px solid $black;
 		}
-		&:last-child {
-			background: $yellow;
-			@include border-radius (5px);
-			&:hover {
-				background: $black;
-				transition: 0.2s;
-				border: 0 !important;
-				a {
-					color: $yellow !important;
-				}
-			}
-		}
+		// &:last-child {
+		// 	background: $yellow;
+		// 	@include border-radius (5px);
+		// 	&:hover {
+		// 		background: $black;
+		// 		transition: 0.2s;
+		// 		border: 0 !important;
+		// 		a {
+		// 			color: $yellow !important;
+		// 		}
+		// 	}
+		// }
 	}
 	&.navInterna {
 		background: rgba($white, 1)!important;
